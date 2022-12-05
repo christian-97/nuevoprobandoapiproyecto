@@ -6,6 +6,7 @@ package com.pe.proyecto.repository;
 
 import com.pe.proyecto.entity.Usuarios;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

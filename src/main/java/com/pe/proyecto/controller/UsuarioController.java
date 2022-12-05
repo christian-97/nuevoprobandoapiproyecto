@@ -39,7 +39,7 @@ public class UsuarioController {
         return usuarioService.findAllCustom();
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("/buscar/{id}")
     public Optional<Usuarios> findById(@PathVariable Long id){
         return usuarioService.findById(id);
     }
@@ -49,17 +49,17 @@ public class UsuarioController {
         return usuarioService.add(u);
     }
     
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Usuarios update(@PathVariable Long id,@RequestBody Usuarios u){
         u.setId(id);
         return usuarioService.update(u);
     }
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public Usuarios delete(@PathVariable Long id){
         Usuarios objusuarios = new Usuarios();
         objusuarios.setEstado(false);
         return usuarioService.delete(Usuarios.builder().id(id).build());
     }
-    
+
 }

@@ -6,11 +6,15 @@ package com.pe.proyecto.service;
 
 import com.pe.proyecto.entity.Usuarios;
 import com.pe.proyecto.repository.UsuarioRepository;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.springframework.security.core.userdetails.User;
 
 /**
  *
@@ -18,6 +22,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UsuarioServiceIMPL implements UsuarioService{
+    @Autowired
+    HttpSession session;
     
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -56,5 +62,5 @@ public class UsuarioServiceIMPL implements UsuarioService{
     public List<Usuarios> findAllCustom() {
         return usuarioRepository.findAllCustom();
     }
-    
+
 }
