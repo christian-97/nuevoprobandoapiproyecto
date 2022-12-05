@@ -61,5 +61,10 @@ public class UsuarioController {
         objusuarios.setEstado(false);
         return usuarioService.delete(Usuarios.builder().id(id).build());
     }
+    
+    @GetMapping("/login/{id}")
+    public boolean login(@PathVariable Long id){
+        return usuarioService.login(id);
+    }
 
 }

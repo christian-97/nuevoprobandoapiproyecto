@@ -63,4 +63,15 @@ public class UsuarioServiceIMPL implements UsuarioService{
         return usuarioRepository.findAllCustom();
     }
 
+    @Override
+    public boolean login(Long id) {
+        if(usuarioRepository.findById(id).isEmpty()){
+            return false;
+        }
+        else{
+            return true;
+        }
+        
+    }
+
 }
