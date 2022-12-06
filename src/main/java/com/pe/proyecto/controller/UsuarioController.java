@@ -44,7 +44,7 @@ public class UsuarioController {
         return usuarioService.findById(id);
     }
     
-    @PostMapping
+    @PostMapping("/agregar")
     public Usuarios add(@RequestBody Usuarios u){
         return usuarioService.add(u);
     }
