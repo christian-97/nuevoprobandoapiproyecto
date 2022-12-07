@@ -20,5 +20,6 @@ public interface UsuarioService {
     public Usuarios update(Usuarios u);
     public Usuarios delete(Usuarios u);
 
-    public boolean login(Long id);
+    public Optional<Usuarios> login(Long id);
+    
 }

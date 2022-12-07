@@ -63,8 +63,8 @@ public class UsuarioController {
     }
     
     @GetMapping("/login/{id}")
-    public boolean login(@PathVariable Long id){
-        return usuarioService.login(id);
+    public Optional login(@PathVariable Long id){
+        return usuarioService.findById(id);
     }
 
 }

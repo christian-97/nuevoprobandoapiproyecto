@@ -17,4 +17,5 @@ import org.springframework.data.jpa.repository.Query;
 public interface UsuarioRepository extends JpaRepository<Usuarios, Long>{
     @Query("select u from Usuarios u where u.estado=1")
     List<Usuarios> findAllCustom();
+
 }

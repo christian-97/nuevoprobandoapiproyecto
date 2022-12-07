@@ -27,6 +27,7 @@ public class UsuarioServiceIMPL implements UsuarioService{
     
     @Autowired
     private UsuarioRepository usuarioRepository;
+  
 
     @Override
     public List<Usuarios> findAll() {
@@ -64,14 +65,7 @@ public class UsuarioServiceIMPL implements UsuarioService{
     }
 
     @Override
-    public boolean login(Long id) {
-        if(usuarioRepository.findById(id).isEmpty()){
-            return false;
-        }
-        else{
-            return true;
-        }
-        
+    public Optional<Usuarios> login(Long id){
+        return usuarioRepository.findById(id);
     }
-
 }
