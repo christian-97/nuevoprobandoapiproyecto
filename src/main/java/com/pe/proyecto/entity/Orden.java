@@ -41,10 +41,10 @@ public class Orden implements Serializable{
     private String numero;
     
     @Column(name = "fechaCreacion")
-    private Date fechaCreacion;
+    private String fechaCreacion;
     
     @Column(name = "fechaRecibida")
-    private Date fechaRecibida;
+    private String fechaRecibida;
     
     @Column(name = "total")
     private double total;
